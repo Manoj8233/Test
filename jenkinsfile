@@ -4,41 +4,35 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout source code from version control (e.g., Git)
-                git 'https://your-git-repository-url.git'
+              
             }
         }
         
         stage('Build') {
             steps {
-                // Build your code (e.g., using Maven, Gradle)
-                sh 'mvn clean package'
+                
             }
         }
         
         stage('Test') {
             steps {
-                // Run tests (e.g., JUnit tests)
-                sh 'mvn test'
+                
             }
         }
         
         stage('Deploy') {
             steps {
-                // Deploy your application (customize based on your deployment strategy)
-                sh 'kubectl apply -f your-deployment-file.yaml'
+                
             }
         }
     }
     
     post {
         success {
-            // Actions to be performed on successful build
-            echo 'Build and deployment successful!'
+            
         }
         failure {
-            // Actions to be performed on build failure
-            echo 'Build or deployment failed!'
+           
         }
     }
 }
